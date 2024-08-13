@@ -1,0 +1,18 @@
+[project]
+name = "test-wasm-platform-specific-dependencies"
+version = "0.0.1"
+authors = [
+  { name="Michael Weinold", email="author@example.com" },
+]
+description = "A small example package to test platform speficic dependencies for WASM."
+readme = "README.md"
+requires-python = ">=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    'pyodide-micropip-test; sys_platform == "emscripten"',
+]
+# https://peps.python.org/pep-0631/#example
+# https://docs.python.org/3/library/sys.html#sys.platform
