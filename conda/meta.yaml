@@ -1,0 +1,23 @@
+package:
+  name: "test_wasm_platform_specific_dependencies"
+  version: "0.0.1"
+
+source:
+  path: ../src
+
+requirements:
+  build:
+    - python
+    - setuptools
+  run:
+    - pytz # to make sure we have one dependency # https://anaconda.org/conda-forge/pytz
+
+build:
+  noarch: generic
+  number: 0
+
+  run:
+    - python
+
+about:
+  home: https://github.com/michaelweinold/test_wasm_platform_specific_dependencies
