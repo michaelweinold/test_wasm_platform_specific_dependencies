@@ -1,6 +1,6 @@
 [project]
 name = "test-wasm-platform-specific-dependencies"
-version = "0.0.1"
+version = "0.0.2"
 authors = [
   { name="Michael Weinold", email="author@example.com" },
 ]
@@ -12,7 +12,8 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 dependencies = [
-    'pyodide-micropip-test; sys_platform == "emscripten"',
+    "pyodide-micropip-test; sys_platform == 'emscripten'",
+    "pytz; sys_platform != 'emscripten'",
 ]
 # https://peps.python.org/pep-0631/#example
 # https://docs.python.org/3/library/sys.html#sys.platform
